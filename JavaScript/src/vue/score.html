@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算成绩</title>
+</head>
+<body>
+    <script>
+        var num =parseInt(prompt("你好","请输入要计算的科目数"));
+        var sum = 0 ;//计算总和
+        var score = 0;//科目分数
+        var avg = 0;//平均成绩
+        number(num);//调用方法
+
+        function number(num) {
+            if (typeof(num) != 'number' || (num < 0 && num>100)){
+                    num = prompt("请输入正确的数字");
+                    alert(num);
+            }
+            for (i=0 ; i<num ;i++){
+                score = parseInt(prompt("请输入第"+(i+1)+"科分数"));
+                sum +=score;
+            }
+            console.log("运行");//控制台测试代码
+            avg = (sum/num).toFixed(2);
+            alert("总成绩:"+sum);
+            alert("平均成绩:"+avg);
+        }
+    </script>
+</body>
+</html>

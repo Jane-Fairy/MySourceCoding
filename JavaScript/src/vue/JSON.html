@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<script>
+    var xiaoming = {
+        name: '小明',
+        age: 14,
+        gender: true,
+        height: 1.65,
+        grade: null,
+        'middle-school': '\"W3C\" Middle School',
+        skills: ['JavaScript', 'Java', 'Python', 'Lisp']
+    };
+    function convert(key , value) {
+        if (typeof value == 'string'){
+            return value.toUpperCase();
+        }
+        else return value;
+    }
+</script>
+</body>
+</html>

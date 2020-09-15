@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            background-color: aquamarine;
+            margin: 200px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <table align="center">
+        <tr>
+            <td>当前时间</td>
+            <td id="timeGet" align="center"></td>
+        </tr>
+    </table>
+
+<script>
+
+    var time2 = document.getElementById('timeGet');
+    function timeDo(){
+        var data = new Date();
+        var Hours = data.getHours();
+        var second = data.getSeconds();
+        Hours2 = Hours%12;
+        var m  =data.getMinutes();
+        var time = Hours2 + ":" + m + ":" + second ;
+        time2.innerHTML = time;
+    }
+    setInterval(timeDo,100);
+</script>
+</body>
+
+</html>
